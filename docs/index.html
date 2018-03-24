@@ -13,7 +13,7 @@
 </header>
 
 <body>
-	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+	<nav class="navbar navbar-expand-md navbar-light fixed-top">
 		<a class="navbar-brand" href="#">Social Network</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -22,49 +22,72 @@
 		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item">
-					<a class="nav-link" href="#">About</a>
+					<a class="nav-link" href="#about">About</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Pricing</a>
+					<a class="nav-link" href="#story">Story</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Connect</a>
+					<a class="nav-link" href="#pricing">Pricing</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#connect">Connect</a>
 				</li>
 			</ul>
 		</div>
 	</nav>
 
 	<main role="main">
-
 		<!-- Main jumbotron for a primary marketing message or call to action -->
-		<div class="hero-header jumbotron paral hero-image">
+		<div class="hero-header jumbotron paral hero-image" id="hero">
 			<div class="container">
 				<h1 class="display-3" align="center">Join the Social Network Revolution!</h1>
-				<p><a class="btn btn-primary btn-lg" href="#" role="button">Connect &raquo;</a></p>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<p><a class="btn btn-primary btn-lg" href="#connect" role="button">Connect &raquo;</a></p>
 			</div>
 		</div>
 
-		<div class="about-section jumbotron paral about-image">
+		<div class="about-section jumbotron paral about-image" id="about">
 			<div class="container">
 				<h1 class="display-3" align="center">About</h1>
 				<p class="lead" align="center">This is a description</p>
 			</div>
 		</div>
 
-		<div class="pricing-section jumbotron paral pricing-image">
+		<div class="story-section jumbotron paral story-image" id="story">
+			<div class="container">
+				<h1 class="display-3" align="center">Story</h1>
+				<p class="lead" align="center">This is where the story is...</p>
+			</div>
+		</div>
+
+		<div class="pricing-section jumbotron paral pricing-image" id="pricing">
 			<div class="container">
 				<h1 class="display-3" align="center">Pricing</h1>
 				<p class="lead" align="center">Act fast to join an exclusive group of people who have lifetime ad-free access to this amazing new network.</p>
 			</div>
 		</div>
 
-		<div class="connect-section jumbotron justify-content-center">
+		<div class="connect-section jumbotron justify-content-center" id="connect">
 			<div class="container">
+				<h1 class="display-3" align="center">Connect</h1>
+				<br/>
+				<br/>
+				<br/>
 				<form class="form-inline my-2 my-lg-0 justify-content-center">
 					<input class="form-control mr-sm-2" type="text" placeholder="Name" aria-label="Name">
 					<input class="form-control mr-sm-2" type="text" placeholder="Email" aria-label="Email">
 					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Enter</button>
 				</form>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
 			</div>
 		</div>
 
@@ -72,19 +95,38 @@
 
 	</div> <!-- /container -->
 
+<script>
+	$(document).ready(function(){       
+   var scroll_start = 0;
+   var startchange = $('#startchange');
+   var offset = startchange.offset();
+    if (startchange.length){
+   $(document).scroll(function() { 
+      scroll_start = $(this).scrollTop();
+      if(scroll_start > offset.top) {
+          $(".navbar-default").css('background-color', '#f0f0f0');
+       } else {
+          $('.navbar-default').css('background-color', 'transparent');
+       }
+   });
+    }
+});
+</script>
+
 </main>
 
 <footer class="container">
-	<p>&copy; Company 2017-2018</p>
+	<p>&copy; Locnet 2018</p>
 </footer>
 
 	<!-- Bootstrap core JavaScript
 		================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<!-- adding custom jquery scripts -->
+		<script src="https://raw.githubusercontent.com/jschmidtnj/social-network-website/master/assets/hero-background.jpg"> </script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-		<!-- parallax scrolling -->
-		<script src="/js/parallax.js"></script>
+
 	</body>
 	</html>

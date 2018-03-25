@@ -52,17 +52,17 @@
 			</div>
 		</div>
 
-		<div class="about-section jumbotron paral about-image" id="about">
+		<div class="about-section jumbotron paral about-image container-fluid text-center" id="about">
 			<div class="container">
 				<h1 class="display-3" align="center">About</h1>
-				<p class="lead" align="center">This is a description</p>
+				<p class="lead" align="center">Started in 2018 by Joshua Schmidt and Krishanu, Locnet is an intuitive, interactive mobile social-network platform. It is open-source, and encourages users to pursue in-person interaction as opposed to through the medium of the app.<br/><br/>To accomplish this, the platform is entirely based on location data, so friend groups can see where each other are to meet in person have fun. Being open-source, Locnet encourages users to inspect the code, to see that their data is not being misused. The user data is protected using blockchain.</p>
 			</div>
 		</div>
 
 		<div class="story-section jumbotron paral story-image" id="story">
 			<div class="container">
 				<h1 class="display-3" align="center">Story</h1>
-				<p class="lead" align="center">This is where the story is...</p>
+				<p class="lead" align="center">After seeing all of the problems with conventional social networks, and recognizing the potential in creating a completely new platform, we decided to do just that. The concept was to create a completely open platform that stresses meeting and connecting with new people, and stressing in-person interactions. The entire platform is location-based, meaning users can see in real-time if their friends are nearby and can then meet up with them. Nearby events, activities, shops, businesses, and attractions are shown in a personalized user-feed.</p>
 			</div>
 		</div>
 
@@ -97,23 +97,23 @@
 
 	</div> <!-- /container -->
 
-<script>
-	$(document).ready(function(){       
-   var scroll_start = 0;
-   var startchange = $('#startchange');
-   var offset = startchange.offset();
-    if (startchange.length){
-   $(document).scroll(function() { 
-      scroll_start = $(this).scrollTop();
-      if(scroll_start > offset.top) {
-          $(".navbar-default").css('background-color', '#f0f0f0');
-       } else {
-          $('.navbar-default').css('background-color', 'transparent');
-       }
-   });
-    }
-});
-</script>
+	<script>
+		$(document).ready(function(){       
+			var scroll_start = 0;
+			var startchange = $('#startchange');
+			var offset = startchange.offset();
+			if (startchange.length){
+				$(document).scroll(function() { 
+					scroll_start = $(this).scrollTop();
+					if(scroll_start > offset.top) {
+						$(".navbar-default").css('background-color', '#f0f0f0');
+					} else {
+						$('.navbar-default').css('background-color', 'transparent');
+					}
+				});
+			}
+		});
+	</script>
 
 </main>
 
@@ -122,13 +122,13 @@
 </footer>
 
 	<!-- Bootstrap core JavaScript
-	================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	
-	<!-- adding custom jquery scripts -->
-	<script src="https://rawgit.com/jschmidtnj/social-network-website/master/js/scripts.js"> </script>
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+		<!-- adding custom jquery scripts -->
+		<script src="https://rawgit.com/jschmidtnj/social-network-website/master/js/scripts.js"> </script>
 
 </body>
 </html>
